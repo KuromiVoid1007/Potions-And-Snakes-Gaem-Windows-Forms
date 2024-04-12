@@ -30,6 +30,7 @@ namespace GameWinform
         public Form1()
         {
             InitializeComponent();
+            /*pictureBox1.Visible = false;*/
             RestartGame();
         }
 
@@ -245,6 +246,7 @@ namespace GameWinform
             monster.Left = randNum.Next(0, 900);
             monster.Top = randNum.Next(0, 800);
             monster.SizeMode = PictureBoxSizeMode.AutoSize;
+            monster.BringToFront();
             snakesList.Add(monster);
             this.Controls.Add(monster);
             player.BringToFront();
@@ -261,7 +263,6 @@ namespace GameWinform
             ammo.Top = randNum.Next(60, this.ClientSize.Height - ammo.Height);
             ammo.Tag = "ammo";
             this.Controls.Add(ammo);
-
             ammo.BringToFront();
             player.BringToFront();
         }
