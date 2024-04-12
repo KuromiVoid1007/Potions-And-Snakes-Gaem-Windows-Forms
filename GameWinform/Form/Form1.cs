@@ -13,11 +13,14 @@ namespace GameWinform
     public partial class Form1 : Form
     {
         bool goLeft, goRight, goUp, goDown, gameOver;
+        bool drag = false;
+        Point startPoint = new Point(0, 0);
         string facing = "Up";
         int playerHealth = 100;
         int speed = 10;
         int ammo = 5;
         int snakeSpeed = 3;
+
 
         Random randNum = new Random();
         int score;
@@ -215,11 +218,14 @@ namespace GameWinform
 
         }
 
+        // дял контроллера 
         private void Form1_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
         }
 
+
+        // спавн лужи
         private void ShootPotion(string direction)
         {
             Potion ShootPotion = new Potion();
@@ -229,6 +235,7 @@ namespace GameWinform
             ShootPotion.MakePotion(this);
         }
 
+        // спавн змей
         private void MakeMonster()
         {
             PictureBox monster = new PictureBox();
@@ -243,6 +250,7 @@ namespace GameWinform
             player.BringToFront();
         }
 
+        // спавин зелий 
         private void DropAmmo()
         {
 
@@ -258,6 +266,7 @@ namespace GameWinform
             player.BringToFront();
         }
 
+        // рестарт
         private void RestartGame()
         {
             player.Image = Properties.Resources.up;
@@ -285,6 +294,39 @@ namespace GameWinform
             ammo = 10;
 
             GameTimer.Start();
+        }
+
+        private void buttonShow_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+
+        // панель
+        private void panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            startPoint = new Point(e.X, e.Y);
+        }
+
+        private void panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - startPoint.X, p.Y - startPoint.Y);
+            }
+        }
+
+        private void panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
+        }
+
+        // выход
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
     }
