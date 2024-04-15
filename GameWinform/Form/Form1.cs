@@ -30,7 +30,6 @@ namespace GameWinform
         public Form1()
         {
             InitializeComponent();
-            /*pictureBox1.Visible = false;*/
             RestartGame();
         }
 
@@ -252,7 +251,7 @@ namespace GameWinform
             player.BringToFront();
         }
 
-        // спавин зелий 
+        // спавн зелий
         private void DropAmmo()
         {
 

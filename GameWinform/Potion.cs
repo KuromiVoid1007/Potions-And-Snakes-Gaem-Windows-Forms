@@ -19,6 +19,7 @@ namespace GameWinform
         private Timer potionTimer = new Timer();
 
 
+
         public void MakePotion(Form form)
         {
 
@@ -29,6 +30,7 @@ namespace GameWinform
             potion.Left = potionLeft;
             potion.Top = potionTop;
             potion.BringToFront();
+
 
             form.Controls.Add(potion);
 
