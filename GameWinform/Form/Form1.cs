@@ -32,6 +32,7 @@ namespace GameWinform
             InitializeComponent();
             /*pictureBox1.Visible = false;*/
             RestartGame();
+
         }
 
         private void MainTimerEvent(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace GameWinform
 
             txtPotion.Text = "Potion: " + ammo;
             txtScore.Text = "kills: " + score;
-                
+
             if (goLeft == true && player.Left > 0)
             {
                 player.Left -= speed;
@@ -136,7 +137,7 @@ namespace GameWinform
                 }
             }
         }
-        
+
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
@@ -323,6 +324,7 @@ namespace GameWinform
         {
             drag = false;
         }
+
 
         // выход
         private void buttonExit_Click(object sender, EventArgs e)

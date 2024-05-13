@@ -12,9 +12,12 @@ namespace GameWinform
 {
     public partial class Form2 : Form
     {
+        private Form1 form1;
+
         public Form2()
         {
             InitializeComponent();
         }
+
     }
 }
