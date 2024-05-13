@@ -14,10 +14,20 @@ namespace GameWinform
     {
         private Form1 form1;
 
-        public Form2()
+
+        public Form2(Form1 form1)
         {
+            TopMost = true;
+
+            this.form1 = form1;
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form1.Enabled = true;
+            form1.RestartGame();
+            this.Close();
+        }
     }
 }

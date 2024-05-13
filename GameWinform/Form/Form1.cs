@@ -12,6 +12,7 @@ namespace GameWinform
 {
     public partial class Form1 : Form
     {
+        Form2 form2;
         bool goLeft, goRight, goUp, goDown, gameOver;
         bool drag = false;
         Point startPoint = new Point(0, 0);
@@ -30,7 +31,9 @@ namespace GameWinform
         public Form1()
         {
             InitializeComponent();
-            /*pictureBox1.Visible = false;*/
+            form2 = new Form2(this);
+            form2.Show();
+            this.Enabled = false;
             RestartGame();
 
         }
@@ -269,7 +272,7 @@ namespace GameWinform
         }
 
         // рестарт
-        private void RestartGame()
+        public void RestartGame()
         {
             player.Image = Properties.Resources.up;
 
