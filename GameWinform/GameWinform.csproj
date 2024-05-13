@@ -91,6 +91,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\NormalFont.ttf" />
     <None Include="Resources\right.png" />
   </ItemGroup>
   <ItemGroup>

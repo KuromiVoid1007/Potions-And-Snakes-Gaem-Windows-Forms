@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace GameWinform
     public partial class Form1 : Form
     {
         Form2 form2;
+        Font guno;
         bool goLeft, goRight, goUp, goDown, gameOver;
         bool drag = false;
         Point startPoint = new Point(0, 0);
@@ -34,7 +36,11 @@ namespace GameWinform
             form2 = new Form2(this);
             form2.Show();
             this.Enabled = false;
+
             RestartGame();
+            LoadFont();
+            txtPotion.Font = guno;
+            txtScore.Font = guno;
         }
 
         private void MainTimerEvent(object sender, EventArgs e)
@@ -325,6 +331,14 @@ namespace GameWinform
         private void panel_MouseUp(object sender, MouseEventArgs e)
         {
             drag = false;
+        }
+
+
+        private void LoadFont() //Загрузка шрифта
+        {
+            PrivateFontCollection custom_font = new PrivateFontCollection();
+            custom_font.AddFontFile("NormalFont.ttf");
+            guno = new Font(custom_font.Families[0], 15);
         }
 
 

@@ -53,11 +53,12 @@
             // 
             this.txtScore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtScore.AutoSize = true;
-            this.txtScore.Location = new System.Drawing.Point(474, 678);
+            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtScore.Location = new System.Drawing.Point(451, 666);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(37, 13);
+            this.txtScore.Size = new System.Drawing.Size(93, 25);
             this.txtScore.TabIndex = 1;
-            this.txtScore.Text = "Kills: 0";
+            this.txtScore.Text = "KILLS: 0";
             // 
             // healthBar
             // 
@@ -71,11 +72,12 @@
             // 
             this.txtPotion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtPotion.AutoSize = true;
-            this.txtPotion.Location = new System.Drawing.Point(12, 678);
+            this.txtPotion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPotion.Location = new System.Drawing.Point(12, 666);
             this.txtPotion.Name = "txtPotion";
-            this.txtPotion.Size = new System.Drawing.Size(36, 13);
+            this.txtPotion.Size = new System.Drawing.Size(91, 25);
             this.txtPotion.TabIndex = 3;
-            this.txtPotion.Text = "potion";
+            this.txtPotion.Text = "POTION";
             // 
             // panel
             // 
@@ -156,11 +158,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label txtScore;
+        public System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Timer GameTimer;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.ProgressBar healthBar;
-        private System.Windows.Forms.Label txtPotion;
+        public System.Windows.Forms.Label txtPotion;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.PictureBox buttonExit;
         private System.Windows.Forms.PictureBox buttonShow;
