@@ -20,7 +20,7 @@ namespace GameWinform
         int playerHealth = 100;
         int speed = 10;
         int ammo = 5;
-        int snakeSpeed = 3;
+        int snakeSpeed = 4;
 
 
         Random randNum = new Random();
@@ -35,7 +35,6 @@ namespace GameWinform
             form2.Show();
             this.Enabled = false;
             RestartGame();
-
         }
 
         private void MainTimerEvent(object sender, EventArgs e)

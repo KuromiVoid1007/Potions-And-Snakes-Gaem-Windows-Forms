@@ -103,6 +103,16 @@ namespace GameWinform.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EXITGAMEbUTTOM {
+            get {
+                object obj = ResourceManager.GetObject("EXITGAMEbUTTOM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap left {
             get {
                 object obj = ResourceManager.GetObject("left", resourceCulture);
@@ -186,6 +196,26 @@ namespace GameWinform.Properties {
         internal static System.Drawing.Bitmap sright {
             get {
                 object obj = ResourceManager.GetObject("sright", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap start_game {
+            get {
+                object obj = ResourceManager.GetObject("start_game", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startbutton {
+            get {
+                object obj = ResourceManager.GetObject("startbutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

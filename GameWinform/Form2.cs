@@ -29,5 +29,10 @@ namespace GameWinform
             form1.RestartGame();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

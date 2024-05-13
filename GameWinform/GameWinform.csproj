@@ -135,5 +135,14 @@
   <ItemGroup>
     <None Include="Resources\map.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXITGAMEbUTTOM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startbutton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
